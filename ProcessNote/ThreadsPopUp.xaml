@@ -1,0 +1,33 @@
+﻿<Window x:Class="ProcessNote.ThreadsPopUp"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProcessNote"
+        mc:Ignorable="d"
+        Title="ThreadsPopUp" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="20" />
+        </Grid.RowDefinitions>
+        <ListView x:Name="ThreadList" ItemsSource="{Binding}" Grid.Column="1" Grid.Row="1" Height="auto" Width="auto">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="ID" Width="auto" DisplayMemberBinding="{ Binding Id }"/>
+                    <GridViewColumn Header="Start Time" Width="auto" DisplayMemberBinding="{ Binding StartTime }"/>
+                    <GridViewColumn Header="Status" Width="auto" DisplayMemberBinding="{ Binding ThreadState }"/>
+                    <GridViewColumn Header="Priority Level" Width="auto" DisplayMemberBinding="{ Binding PriorityLevel }"/>
+                    
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>

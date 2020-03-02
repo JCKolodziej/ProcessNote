@@ -1,0 +1,26 @@
+﻿<Window x:Class="ProcessNote.CommentPopUp"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProcessNote"
+        mc:Ignorable="d"
+        Title="CommentPopUp" Height="125" Width="450" d:DesignWidth="469.5" d:DesignHeight="127">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center"><Run Text="There is one or more unsaved comment related to the current process.&#x0a; Would you like to save them?"/></TextBlock>
+        <Button Grid.Row="2" Grid.Column="1" Content="Yes" Width="50" Name="yesButton"/>
+        <Button Grid.Row="2" Grid.Column="2" Content="Change without saving" Width="150" Name="noButton"/>
+    </Grid>
+</Window>
